@@ -1,19 +1,18 @@
 package factory;
-import java.util.*;
 
 import lotr.Character;
-import lotr.Elf;
-import lotr.Hobbit;
-import lotr.King;
-import lotr.Knight;
+import org.reflections.Reflections;
+import java.util.*;
 
 public class CharacterFactory {
     private static final Random RANDOM = new Random();
+    private static final List<Class<? extends Character>> CLASSES;
 
-    private static final List<Class<? extends Character>> CLASSES =
-            Collections.unmodifiableList(
-                    Arrays.asList(Hobbit.class, Elf.class, King.class, Knight.class)
-            );
+    static {
+        Reflections reflections = new Reflections("lotr");
+        Set<Class<? extends Character>> subTypes = reflections.getSubTypesOf(Character.class);
+        CLASSES = new ArrayList<>(subTypes);
+    }
 
     public static Character createCharacter() {
         try {
