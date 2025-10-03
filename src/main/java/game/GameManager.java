@@ -1,5 +1,5 @@
 package game;
-import characters.Character;
+import lotr.Character;
 
 public class GameManager {
     public void fight(Character c1, Character c2) {

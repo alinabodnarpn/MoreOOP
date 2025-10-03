@@ -1,8 +1,8 @@
 package app;
 
-import characters.Character;
 import factory.CharacterFactory;
 import game.GameManager;
+import lotr.Character;
 
 public class Main {
     public static void main(String[] args) {

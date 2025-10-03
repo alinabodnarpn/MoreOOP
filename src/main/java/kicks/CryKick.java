@@ -1,6 +1,6 @@
 package kicks;
 
-import characters.Character;
+import lotr.Character;
 
 public class CryKick implements KickStrategy {
     @Override

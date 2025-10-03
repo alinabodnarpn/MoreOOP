@@ -1,7 +1,8 @@
 package kicks;
 
-import characters.Character;
 import java.util.Random;
+
+import lotr.Character;
 
 public class RandomDamageKick implements KickStrategy {
     private final Random random = new Random();
