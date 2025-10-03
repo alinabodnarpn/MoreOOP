@@ -1,3 +1,4 @@
+package factory;
 import characters.Character;
 import characters.Hobbit;
 import characters.Elf;

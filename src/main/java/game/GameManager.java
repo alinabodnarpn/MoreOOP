@@ -1,3 +1,4 @@
+package game;
 import characters.Character;
 
 public class GameManager {
